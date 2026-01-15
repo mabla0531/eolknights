@@ -5,7 +5,7 @@
   let html = "";
 
   onMount(async () => {
-    const res = await fetch("/activities_body.md");
+    const res = await fetch("/events_body.md");
     const md = await res.text();
     html = marked(md);
   });

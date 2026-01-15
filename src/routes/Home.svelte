@@ -5,7 +5,7 @@
   let html = "";
 
   onMount(async () => {
-    const res = await fetch("/activities_body.md");
+    const res = await fetch("/home_body.md");
     const md = await res.text();
     html = marked(md);
   });
@@ -14,5 +14,5 @@
 <div
   class="flex flex-col w-full h-full carousel-item gap-8 p-8 md:p-16 lg:p-24"
 >
-  <div>{@html html}</div>
+  <div class="p-8 md:p-16 lg:p-24">{@html html}</div>
 </div>
