@@ -12,7 +12,7 @@
   });
 </script>
 
-<CarouselItem title="Activities">
+<CarouselItem title="Activities" id="activities">
   {@html html}
   <div class="flex w-full justify-end">
     <button class="btn btn-primary btn-soft">Event Calendar</button>

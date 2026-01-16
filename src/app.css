@@ -7,3 +7,14 @@
 * {
   box-sizing: border-box;
 }
+
+@layer utilities {
+  .hide-scrollbar-on-ios-as-well {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar-on-ios-as-well::-webkit-scrollbar {
+    display: none;
+  }
+}

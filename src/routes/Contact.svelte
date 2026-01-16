@@ -12,6 +12,6 @@
   });
 </script>
 
-<CarouselItem title="Contact">
+<CarouselItem title="Contact" id="contact">
   {@html html}
 </CarouselItem>
