@@ -1,4 +1,5 @@
 <script lang="ts">
+  import CarouselItem from "$lib/components/CarouselItem.svelte";
   import { marked } from "marked";
   import { onMount } from "svelte";
 
@@ -11,8 +12,6 @@
   });
 </script>
 
-<div
-  class="flex flex-col w-full h-full carousel-item gap-8 p-8 md:p-16 lg:p-24"
->
-  <div>{@html html}</div>
-</div>
+<CarouselItem title="Officers">
+  {@html html}
+</CarouselItem>

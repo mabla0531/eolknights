@@ -8,44 +8,60 @@
     heading({ tokens, depth }) {
       const text = this.parser.parseInline(tokens);
 
-      let text_size_string = "text-md";
+      let text_size_string = "text-lg";
 
       switch (depth) {
-        case -1:
-          text_size_string = "text-sm";
         case 1:
-          text_size_string = "text-2xl";
+          text_size_string = "text-3xl";
           break;
         case 2:
-          text_size_string = "text-xl";
+          text_size_string = "text-2xl";
           break;
         case 3:
-          text_size_string = "text-lg";
+          text_size_string = "text-xl";
           break;
       }
 
-      return `<div class="${text_size_string} font-bold">${text}</div>`;
+      return `<div class="${text_size_string} font-bold my-4">${text}</div>`;
     },
     table({ header, rows }) {
       const headerRow = header
-        .map((cell) => `<th>${this.parser.parseInline(cell.tokens)}</th>`)
+        .map((cell) => {
+          let inner = this.parser.parseInline(cell.tokens);
+          if (inner != "") {
+            return `<th>${inner}</th>`;
+          } else {
+            return ``;
+          }
+        })
         .join("");
 
       const bodyRows = rows
         .map((row) => {
           const cells = row
-            .map((cell) => `<td>${this.parser.parseInline(cell.tokens)}</td>`)
+            .map(
+              (cell, index) =>
+                `<td class="flex grow ${index >= row.length - 1 ? "justify-end" : ""}">${this.parser.parseInline(cell.tokens)}</td>`,
+            )
             .join("");
-          return `<tr>${cells}</tr>`;
+          return `<tr class="flex w-full">${cells}</tr>`;
         })
         .join("");
 
       return `
-        <table class="table w-auto">
+        <table class="table w-fit">
           <thead><tr>${headerRow}</tr></thead>
           <tbody>${bodyRows}</tbody>
         </table>
       `;
+    },
+    paragraph({ tokens }) {
+      const text = this.parser.parseInline(tokens);
+
+      return `<p class="my-4">${text}</p>`;
+    },
+    link({ href, text }) {
+      return `<a class="link text-blue-500" href=${href}>${text}</a>`;
     },
   };
 

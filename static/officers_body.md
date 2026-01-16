@@ -1,5 +1,3 @@
-# Officers
-
 |                     |                        |
 | ------------------- | ---------------------- |
 | Grand Knight        | McCreesh, Francis X    |
@@ -11,7 +9,7 @@
 | Advocate            | Greco, James L         |
 | Warden              | Pruskowski, Stanley    |
 
-# Appointed Officers
+### Appointed Officers
 
 |          |                  |
 | -------- | ---------------- |
