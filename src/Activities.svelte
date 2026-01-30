@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CarouselItem from "$lib/components/CarouselItem.svelte";
+  import CarouselItem from "./CarouselItem.svelte";
   import { marked } from "marked";
   import { onMount } from "svelte";
 
@@ -15,6 +15,8 @@
 <CarouselItem title="Activities" id="activities">
   {@html html}
   <div class="flex w-full justify-end">
-    <button class="btn btn-primary btn-soft">Event Calendar</button>
+    <a href="https://calendar.google.com/calendar/u/0?cid=MGQ3OTlmMjJhMjBmOGZlM2ZjZDcxMWY4MTY1ZTdmNWNlNTAyODZmZDljZjI3NWMwOWE5MDg5YTdhN2FkZTQ5ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
+      <button class="btn btn-primary btn-soft">Event Calendar</button>
+    </a>
   </div>
 </CarouselItem>

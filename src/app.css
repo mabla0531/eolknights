@@ -4,8 +4,17 @@
   themes: light --default;
 }
 
+@font-face {
+  font-family: Canterbury;
+  src: url(Canterbury.ttf);
+}
+
 * {
   box-sizing: border-box;
+}
+
+.canterbury {
+  font-family: Canterbury;
 }
 
 @layer utilities {

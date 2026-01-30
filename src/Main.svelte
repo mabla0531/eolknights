@@ -1,8 +1,7 @@
 <script lang="ts">
-  import favicon from "$lib/assets/favicon.svg";
   import { marked } from "marked";
-
-  import "../app.css";
+  import favicon from "/logo.jpg";
+  import App from "./App.svelte";
 
   const renderer = {
     heading({ tokens, depth }) {
@@ -74,4 +73,4 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children()}
+<App />

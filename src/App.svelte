@@ -7,7 +7,7 @@
   import Membership from "./Membership.svelte";
 
   let activeTab = $state(0);
-  let carouselRef: HtmlDivElement;
+  let carouselRef: HTMLDivElement;
   let isScrolling = false;
 
   const tabs = ["Home", "Activities", "Contact", "Membership", "Officers"];
@@ -72,7 +72,7 @@
       <img class="rounded-box shadow-lg" src="logo.jpg" />
     </div>
     <div class="flex flex-col h-full items-center justify-end gap-2">
-      <div class="font-bold text-xl sm:text-2xl md:text-3xl">
+      <div class="canterbury font-bold text-xl sm:text-3xl md:text-4xl">
         Knights of Columbus
       </div>
 
@@ -106,7 +106,7 @@
   >
     <div class="flex flex-col w-full items-center">
       <div class="text-sm md:text-md">Epiphany of Our Lord Council 10605</div>
-      <div class="flex flex-wrap text-sm md:text-md justify-center">
+      <div class="flex flex-wrap gap-4 text-sm md:text-md justify-center">
         <div>3040 Walton Rd. Plymouth Meeting, PA 19454</div>
         <div>(215) 654-7404</div>
       </div>
